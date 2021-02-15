@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  background: #1e1f29 url("../images/bg-stars.svg") center center;
+}
+
+h1 {
+  font-size: clamp(0.875rem, 3vw, 1rem);
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  margin-top: 8.75rem;
+  letter-spacing: 8px;
+}
+
+.container {
+  max-width: Min(90vw, 690px);
+  margin: 0 auto;
+}
+
+.timer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3.9375rem;
+}
+
+@media (min-width: 40em) {
+  .timer-container {
+    margin-top: 7rem;
+  }
+}
+
+.timer-container .timer-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.timer-container .timer-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.timer-container .timer-item p {
+  font-size: clamp(7px, 1vw, 12px);
+  color: #8486a9;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+@media (min-width: 40em) {
+  .timer-container .timer-item p {
+    margin-top: 2rem;
+  }
+}
+
+.timer-container .timer-item .timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 9.375rem;
+  max-height: 8.75rem;
+  background: #343650;
+  width: 100%;
+  position: relative;
+  padding: 20px 14px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 6px 0 #191a24;
+          box-shadow: 0 6px 0 #191a24;
+}
+
+@media (min-width: 40em) {
+  .timer-container .timer-item .timer {
+    padding: 40px 27px;
+    -webkit-box-shadow: 0 12px 0 #191a24;
+            box-shadow: 0 12px 0 #191a24;
+  }
+}
+
+.timer-container .timer-item .timer::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.timer-container .timer-item .timer h4 {
+  font-size: clamp(1.8125rem, 5vw, 3.75rem);
+  color: #fb6087;
+}
+
+.timer-container .timer-item .timer .circle {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 50%;
+  background: #191a24;
+}
+
+@media (min-width: 40em) {
+  .timer-container .timer-item .timer .circle {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.timer-container .timer-item .timer .left {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.timer-container .timer-item .timer .right {
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateX(50%) translateY(-50%);
+          transform: translateX(50%) translateY(-50%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: Min(169px, 200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url("../images/pattern-hills.svg") no-repeat top right;
+  background-size: cover;
+}
+
+footer .social-medias {
+  width: 8.4375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .social-medias a svg:hover path {
+  fill: #fb6087;
+}
+/*# sourceMappingURL=main.css.map */

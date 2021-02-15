@@ -1,0 +1,118 @@
+.timer-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.9375rem;
+
+  @include breakpoint-up(medium) {
+    margin-top: 7rem;
+  }
+
+  .timer-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    p {
+      font-size: clamp(7px, 1vw, 12px);
+      color: $Grayish-blue;
+      text-transform: uppercase;
+      margin-top: 1rem;
+      letter-spacing: 4px;
+      font-weight: 700;
+
+      @include breakpoint-up(medium) {
+        margin-top: 2rem;
+      }
+    }
+
+    .timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 9.375rem;
+      max-height: 8.75rem;
+      background: $Dark-desaturated-blue;
+      width: 100%;
+      position: relative;
+      padding: 20px 14px;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 0 $Black;
+
+      @include breakpoint-up(medium) {
+        padding: 40px 27px;
+        box-shadow: 0 12px 0 $Black;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        background: rgba($color: #000000, $alpha: 0.1);
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      h4 {
+        font-size: clamp(1.8125rem, 5vw, 3.75rem);
+        color: $Soft-red;
+      }
+
+      .circle {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        border-radius: 50%;
+        background: $Black;
+
+        @include breakpoint-up(medium) {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      .left {
+        top: 50%;
+        left: 0;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      .right {
+        top: 50%;
+        right: 0;
+        transform: translateX(50%) translateY(-50%);
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: Min(169px, 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/pattern-hills.svg") no-repeat top right;
+  background-size: cover;
+
+  .social-medias {
+    width: 8.4375rem;
+    display: flex;
+    justify-content: space-between;
+
+    a svg:hover path {
+      fill: $Soft-red;
+    }
+  }
+}
